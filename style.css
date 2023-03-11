@@ -159,7 +159,6 @@ a {
     line-height: 38px;
     border: 1px solid #ebebeb;
     border-radius: 0;
-    min-width: 200px;
     padding: 0 10px;
 }
 
@@ -272,7 +271,7 @@ a {
 /*Handle PC,iPad,Mobile*/
 
 
-/*Mobile: width < 740px*/
+/*Mobile: width < 740px and iPad: width >= 740px and width < 1024px*/
 @media only screen and (max-width: 1023px) {
     .wrapper {
         height: 155px;
