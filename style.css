@@ -275,6 +275,7 @@ a {
 }
 
 .nav__mobile-sidebar {
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -338,7 +339,107 @@ a {
 }
 
 /* Content page */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__popular-product {
+    display: flex;
+    justify-content: center;
+}
+
+.content__popular-product-container {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-product-item {
+    position: relative;
+}
+
+.popular-product-text1 {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.popular-product-text2 {
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    font-size: large;
+}
+
+.content__popular-product-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__list-product {
+    width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.product-item {
+    width: 23%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.product-new-text{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    font-size: medium;
+    background-color: #323232;
+    color: #fff;
+    padding: 5px;
+}
+
 /* Bottom page */
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+    color: #fff;
+}
+
+.footer__info {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.footer__copyright {
+    width: 100%;
+    padding: 45px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+}
+
+.footer__copyright-content {
+    width: 1170px;
+}
+
+.footer__info-item {
+    padding-right: 20px;
+}
 
 /* Handle PC,iPad,Mobile */
 
@@ -381,7 +482,6 @@ a {
     .header-nav__container-account {
         height: 50px;
     }
-
 }
 
 @media only screen and (min-width: 1024px) {
