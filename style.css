@@ -3,12 +3,11 @@ body {
     padding: 0;
 }
 
-textarea:focus,
 input:focus {
     outline: none;
 }
 
-/*Header page*/
+/* Header page */
 .wrapper {
     height: 233px;
     display: flex;
@@ -160,6 +159,7 @@ a {
     border: 1px solid #ebebeb;
     border-radius: 0;
     padding: 0 10px;
+    min-width: 200px;
 }
 
 .header-top__logo {
@@ -224,9 +224,11 @@ a {
 .menu_icon {
     width: 25px;
     height: 25px;
+    margin-left: -10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("images/menu_icon.png");
+    cursor: pointer;
 }
 
 .user_icon {
@@ -250,10 +252,7 @@ a {
     height: 100%;
     display: flex;
     justify-content: center;
-}
-
-.mobile-logo {
-    width: 70px;
+    align-items: center;
 }
 
 .header-nav__mobile-cart {
@@ -264,14 +263,94 @@ a {
     margin-right: -18px;
 }
 
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
 
-/*Content page*/
-/*Bottom page*/
+.nav__mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform linear 0.4s;
+}
 
-/*Handle PC,iPad,Mobile*/
+.back_icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/back_icon.png");
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.nav__mobile-sidebar-menu {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    position: relative;
+}
+
+.nav__mobile-sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Handle open sidebar mobile */
+.nav__input:checked~.nav__overlay {
+    display: block;
+}
+
+.nav__input:checked~.nav__mobile-sidebar {
+    transform: translateX(0%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Content page */
+/* Bottom page */
+
+/* Handle PC,iPad,Mobile */
 
 
-/*Mobile: width < 740px and iPad: width >= 740px and width < 1024px*/
+/* Mobile: width < 740px */
+@media only screen and (max-width: 739px) {
+    .logo {
+        width: 70px;
+    }
+}
+
+/* Mobile: width < 740px and iPad: width >= 740px and width < 1024px */
 @media only screen and (max-width: 1023px) {
     .wrapper {
         height: 155px;
@@ -292,11 +371,17 @@ a {
     .header-top__search-input {
         width: 100%;
         background: none;
+        min-width: auto;
     }
 
     .cart_icon {
         margin: -5px 5px 0 0;
     }
+
+    .header-nav__container-account {
+        height: 50px;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
@@ -61,14 +61,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- input for handle open sidebar mobile -->
+        <input type="checkbox" hidden class="nav__input" id="nav-mobile-input">
+        <label for="nav-mobile-input" class="nav__overlay"></label>
+        <!-- Handle open sidebar mobile -->
+
         <div class="header-nav__mobile">
             <div class="header-nav__mobile-top">
+                <!-- Handle open sidebar mobile -->
                 <div class="header-nav__mobile-menu">
-                    <a class="menu_icon"></a>
+                    <label for="nav-mobile-input" class="menu_icon"></label>
                 </div>
+                <!-- Handle open sidebar mobile -->
+
                 <div class="header-nav__mobile-logo">
                     <a href="https://shop.oyika.net/">
-                        <img class="mobile-logo" src="https://shop.oyika.net/img/logo-1671543231.jpg" alt="Oyika">
+                        <img class="logo" src="https://shop.oyika.net/img/logo-1671543231.jpg" alt="Oyika">
                     </a>
                 </div>
                 <div class="header-nav__mobile-cart">
@@ -81,6 +90,30 @@
                     <input class="header-top__search-input" type="text" placeholder="Search our catalog" />
                     <a class="search_icon"></a>
                 </div>
+            </div>
+        </div>
+        <div class="nav__mobile-sidebar">
+            <div class="header-nav__container-link">
+                <span>(021) 53192333</span>
+                <span>cs.id@oyika.com</span>
+                <a class="twitter_icon" title="Twitter" href="https://twitter.com/IndonesiaOyika"></a>
+                <a class="fb_icon" title="Facebook" href="https://www.facebook.com/OyikaIndonesia"></a>
+                <a class="yt_icon" title="YouTube" href="https://www.youtube.com/channel/UC75uEp83O2y-7_w4PpFTdJQ"></a>
+                <a class="instagram_icon" title="Instagram" href="https://www.instagram.com/oyika.indonesia/"></a>
+                <a class="whatsapp_icon" title="Whatsapp"
+                    href="https://api.whatsapp.com/send/?phone=%2B6281219089231&text&type=phone_number&app_absent="></a>
+            </div>
+            <div class="header-nav__container-account">
+                <span>IDR Rp</span>
+                <span>Setting</span>
+            </div>
+            <div class="nav__mobile-sidebar-menu">
+                <span>MENU</span>
+                <label for="nav-mobile-input" class="back_icon"></label>
+            </div>
+            <div class="nav__mobile-sidebar-bottom">
+                <span>Home</span>
+                <span>Bikes</span>
             </div>
         </div>
     </header>
