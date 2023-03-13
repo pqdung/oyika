@@ -332,6 +332,7 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
   display: none;
   animation: fadeIn linear 0.2s;
+  z-index: 10;
 }
 
 .nav__mobile-sidebar {
@@ -406,6 +407,76 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Banner */
+.content__banner {
+  width: 100%;
+}
+
+.content__banner-item {
+  position: relative;
+  display: block;
+}
+
+.img_banner {
+  width: 100%;
+  z-index: -1;
+}
+
+.prev_icon {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/prev_icon.png');
+  cursor: pointer;
+}
+
+.next_icon {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/next_icon.png');
+  cursor: pointer;
+}
+
+.banner-btn-prev {
+  position: absolute;
+  top: 45%;
+  font-size: x-large;
+}
+
+.banner-btn-next {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  font-size: x-large;
+}
+
+.content__banner2 {
+  display: none;
+}
+
+.nav__input-banner1:not(:checked) ~ .content__banner1 {
+  display: block;
+}
+
+.nav__input-banner1:checked ~ .content__banner1 {
+  display: block;
+}
+
+.nav__input-banner1:checked ~ .content__banner2 {
+  display: none;
+}
+
+.nav__input-banner2:checked ~ .content__banner2 {
+  display: block;
+}
+
+.nav__input-banner2:checked ~ .content__banner1 {
+  display: none;
 }
 
 /* Popular product */
