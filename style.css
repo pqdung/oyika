@@ -291,15 +291,16 @@ a {
 .menu-IDR-pc {
     z-index: 10;
     position: absolute;
+    top: 30px;
     right: 70px;
-    width: 130px;
-    height: 120px;
+    width: 100px;
+    height: 70px;
     max-width: 100%;
     background-color: #fff;
     display: none;
     flex-direction: column;
-    transform: translateY(-100%);
-    transition: transform linear 0.4s;
+    /*transform: translateY(-100%);*/
+    /*transition: transform linear 0.4s;*/
     box-shadow: 1px 1px 1px rgb(170 170 170 / 73%);
     border: none;
     padding-left: 20px;
@@ -308,18 +309,27 @@ a {
 .menu-setting-pc {
     z-index: 10;
     position: absolute;
+    top: 30px;
     right: 0;
-    width: 130px;
-    height: 180px;
+    width: 120px;
+    height: 110px;
     max-width: 100%;
     background-color: #fff;
     display: none;
     flex-direction: column;
-    transform: translateY(-100%);
-    transition: transform linear 0.4s;
+    /*transform: translateY(-100%);*/
+    /*transition: transform linear 0.4s;*/
     box-shadow: 1px 1px 1px rgb(170 170 170 / 73%);
     border: none;
     padding-left: 20px;
+}
+
+.menu-IDR-pc > p{
+    margin: 3px;
+}
+
+.menu-setting-pc > p{
+    margin: 3px;
 }
 
 .arrow-down-IDR-icon {
@@ -336,12 +346,20 @@ a {
 
 .header__input-IDR-pc:checked ~ .menu-IDR-pc {
     display: flex;
-    transform: translateY(60%);
+    /*transform: translateY(80%);*/
+}
+
+.header__input-IDR-pc:not(:checked) ~ .menu-IDR-pc {
+    display: none;
 }
 
 .header__input-setting-pc:checked ~ .menu-setting-pc {
     display: flex;
-    transform: translateY(60%);
+    /*transform: translateY(65%);*/
+}
+
+.header__input-setting-pc:not(:checked) ~ .menu-setting-pc {
+    display: none;
 }
 
 /*Mobile*/
@@ -705,18 +723,6 @@ a {
     display: none;
 }
 
-.nav__input-banner1:not(:checked) ~ .content__banner1 {
-    display: block;
-}
-
-.nav__input-banner1:checked ~ .content__banner1 {
-    display: block;
-}
-
-.nav__input-banner1:checked ~ .content__banner2 {
-    display: none;
-}
-
 .nav__input-banner2:checked ~ .content__banner2 {
     display: block;
 }
@@ -1038,6 +1044,38 @@ a {
     filter: invert(1);
     width: 20px !important;
     height: 20px !important;
+}
+
+.footer__link-item {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__link-item:hover {
+    color: #fab115;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer__link-item:link {
+    text-decoration: none;
+}
+
+.footer__link-item:visited {
+    text-decoration: none;
+}
+
+.footer__link-item:active {
+    text-decoration: none;
+}
+
+.footer__product-company-item > p {
+    margin: 4px 0;
+}
+
+.footer__info-item > p,a {
+    font-size: 14px;
 }
 
 /* Handle PC,iPad,Mobile */

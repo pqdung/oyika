@@ -6,6 +6,25 @@
     <title>Oyika</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css"/>
+    <script type="text/javascript">
+        function onClickMenuPC(checkIDR) {
+            if (checkIDR) {
+                if (document.getElementById("menu-pc-IDR-input").checked) {
+                    document.getElementById("menuIDRId").style.display = 'flex';
+                } else {
+                    document.getElementById("menuIDRId").style.display = 'none';
+                }
+                document.getElementById("menuSettingId").style.display = 'none';
+            } else {
+                if (document.getElementById("menu-pc-setting-input").checked) {
+                    document.getElementById("menuSettingId").style.display = 'flex';
+                } else {
+                    document.getElementById("menuSettingId").style.display = 'none';
+                }
+                document.getElementById("menuIDRId").style.display = 'none';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -28,17 +47,20 @@
                     ></a>
                 </div>
                 <div class="header-nav__container-account">
-                    <label for="menu-pc-IDR-input" class="header-nav__container-account-item">IDR Rp</label>
-                    <label for="menu-pc-setting-input" class="header-nav__container-account-item">Setting</label>
-                    <input type="checkbox" class="header__input-IDR-pc" id="menu-pc-IDR-input" hidden/>
-                    <input type="checkbox" class="header__input-setting-pc" id="menu-pc-setting-input" hidden/>
+                    <label for="menu-pc-IDR-input" id="menu-IDR" class="header-nav__container-account-item">IDR
+                        Rp</label>
+                    <label for="menu-pc-setting-input" id="menu-setting" class="header-nav__container-account-item">Setting</label>
+                    <input type="checkbox" onchange="onClickMenuPC(true)" class="header__input-IDR-pc"
+                           id="menu-pc-IDR-input" hidden/>
+                    <input type="checkbox" onchange="onClickMenuPC( false)" class="header__input-setting-pc"
+                           id="menu-pc-setting-input" hidden/>
                     <label for="menu-pc-IDR-input" class="arrow-down_icon arrow-down-IDR-icon"> </label>
                     <label for="menu-pc-setting-input" class="arrow-down_icon arrow-down-setting-icon"> </label>
-                    <div class="menu-IDR-pc">
+                    <div class="menu-IDR-pc" id="menuIDRId">
                         <p>IDR Rp</p>
                         <p>USD $</p>
                     </div>
-                    <div class="menu-setting-pc">
+                    <div class="menu-setting-pc" id="menuSettingId">
                         <p>My Account</p>
                         <p>Checkout</p>
                         <p>Sign In</p>
@@ -179,10 +201,9 @@
 </header>
 <div class="content">
     <div class="content__banner">
-        <input type="checkbox" class="nav__input-banner1" id="banner1-input" hidden/>
         <input type="checkbox" class="nav__input-banner2" id="banner2-input" hidden/>
-        <label for="banner1-input" class="content__banner-item content__banner1">
-            <label for="banner1-input" class="banner-btn-prev prev_icon"></label>
+        <label for="banner2-input" class="content__banner-item content__banner1">
+            <label for="banner2-input" class="banner-btn-prev prev_icon"></label>
             <label for="banner2-input" class="banner-btn-next next_icon"></label>
             <a href=""
             ><img
@@ -193,7 +214,7 @@
             </a>
         </label>
         <label for="banner2-input" class="content__banner-item content__banner2">
-            <label for="banner1-input" class="banner-btn-prev prev_icon"></label>
+            <label for="banner2-input" class="banner-btn-prev prev_icon"></label>
             <label for="banner2-input" class="banner-btn-next next_icon"></label>
             <a href=""
             ><img
@@ -336,7 +357,7 @@
     <div class="footer">
         <div class="footer__info">
             <div class="footer__contact-info footer__info-item">
-                <br/><br/><br/>
+                <br/><br/>
                 <p>Address: Jl.Raya Daan Mogot, RT.006/01, Kebon Besar, Batu Ceper - Tangerang 15122</p>
                 <p>Phone number: (021) 53192333</p>
                 <p>Email: cs.id@oyika.com</p>
@@ -347,19 +368,50 @@
             <div class="footer__product-company footer__info-item">
                 <div class="footer__product-company-item">
                     <h4>Products</h4>
-                    <p>New Products</p>
-                    <p>Best Sales</p>
-                    <p>Prices Drop</p>
+                    <p><a id="link-product-page-new-products-1" class="footer__link-item"
+                          href="https://shop.oyika.net/new-products" title="Our new products">
+                        New products
+                    </a></p>
+                    <p><a id="link-product-page-best-sales-1" class="footer__link-item"
+                          href="https://shop.oyika.net/best-sales" title="Our best sales">
+                        Best sales
+                    </a></p>
+                    <p><a id="link-product-page-prices-drop-1" class="footer__link-item"
+                          href="https://shop.oyika.net/prices-drop" title="Our special products">
+                        Prices drop
+                    </a></p>
                 </div>
                 <div class="footer__product-company-item">
                     <h4>Our Company</h4>
-                    <p>Delivery</p>
-                    <p>Terms And Conditions Of Purchase</p>
-                    <p>About Us</p>
-                    <p>Payment Methods</p>
-                    <p>Contact Us</p>
-                    <p>Sitemap</p>
-                    <p>Stores</p>
+                    <p><a id="link-cms-page-1-2" class="footer__link-item"
+                          href="https://shop.oyika.net/content/1-delivery" title="Our terms and conditions of delivery">
+                        Delivery
+                    </a></p>
+                    <p><a id="link-cms-page-3-2" class="footer__link-item"
+                          href="https://shop.oyika.net/content/3-terms-and-conditions-of-purchase"
+                          title="Our terms and conditions of purchase">
+                        Terms and conditions of purchase
+                    </a></p>
+                    <p><a id="link-cms-page-4-2" class="footer__link-item"
+                          href="https://shop.oyika.net/content/4-about-us" title="Learn more about us">
+                        About us
+                    </a></p>
+                    <p><a id="link-cms-page-5-2" class="footer__link-item"
+                          href="https://shop.oyika.net/content/5-payment-methods" title="payment methods">
+                        Payment Methods
+                    </a></p>
+                    <p><a id="link-static-page-contact-2" class="footer__link-item"
+                          href="https://shop.oyika.net/contact-us" title="Use our form to contact us">
+                        Contact us
+                    </a></p>
+                    <p><a id="link-static-page-sitemap-2" class="footer__link-item"
+                          href="https://shop.oyika.net/sitemap" title="Lost ? Find what your are looking for">
+                        Sitemap
+                    </a></p>
+                    <p><a id="link-static-page-stores-2" class="footer__link-item" href="https://shop.oyika.net/stores"
+                          title="">
+                        Stores
+                    </a></p>
                 </div>
             </div>
             <div class="footer__adv-info footer__info-item">
